@@ -32,8 +32,8 @@ export default function CreateInoviceForm() {
             <option value="paid">Pagada</option>
           </select>
         </div>
+        <Button type="submit">Crear Factura</Button>
       </div>
-      <Button type="submit">Crear Factura</Button>
     </form>
   );
 }

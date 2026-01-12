@@ -14,6 +14,7 @@ export async function createInvoice(formData: FormData) {
     amount,
     status,
   });
+
+  revalidatePath("/");
 }
 
-revalidatePath("/");

@@ -1,5 +1,6 @@
 import { db } from "@/db";
 import { invoices } from "@/db/schema";
+import CreateInoviceForm from "@/features/invoices/components/CreateInvoiceForm";
 
 export default async function Home() {
   const allInvoices = await db.select().from(invoices);
@@ -7,6 +8,8 @@ export default async function Home() {
   return (
     <main className="max-w-4xl mx-auto p-10">
       <h1 className="text-3xl font-bold mb-6">Mis Facturas</h1>
+      <CreateInoviceForm />
+
       <div className="border rounded-lg shadow-sm">
         {allInvoices.map((invoice) => (
           <div
