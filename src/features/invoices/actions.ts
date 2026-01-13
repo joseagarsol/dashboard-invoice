@@ -17,7 +17,7 @@ export type ActionState = {
 export async function createInvoice(
   prevState: ActionState,
   formData: FormData
-) {
+): Promise<ActionState> {
   const rawData = {
     amount: formData.get("amount"),
     status: formData.get("status"),
